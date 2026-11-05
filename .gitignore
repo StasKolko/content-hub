@@ -1,0 +1,229 @@
+# ============================================================
+#  .gitignore
+#  Conventions used in this file:
+#    - one comment line, directly above the block it describes;
+#    - a pattern without a leading slash matches at any depth;
+#    - a pattern with a leading slash is anchored to the repo root;
+#    - negations (!) always follow the pattern they re-include.
+# ============================================================
+
+
+# ---------- Operating systems ----------
+
+# macOS
+.DS_Store
+._*
+.AppleDouble/
+.LSOverride
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.TemporaryItems/
+.DocumentRevisions-V100/
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.apdisk
+Icon?
+Network Trash Folder
+Temporary Items
+
+# Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.stackdump
+
+# Windows installers and patch packages
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Microsoft Office temporary lock files
+~$*
+
+# Linux
+.directory
+.Trash-*/
+*~
+.nfs*
+.fuse_hidden*
+.goutputstream-*
+# Crash dumps only. A bare "core" is intentionally not used: it would
+# also match a package or directory named "core" in a monorepo, and the
+# glob "core.*" would match source files such as core.ts or core.utils.ts.
+core.[0-9]*
+
+
+# ---------- Editors and IDEs ----------
+
+# JetBrains (IntelliJ IDEA, WebStorm, PhpStorm, PyCharm, Rider, CLion, GoLand, DataGrip, Fleet, Android Studio)
+.idea/
+.fleet/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio Code
+# "*" inside the folder instead of the folder itself: otherwise git
+# cannot re-include nested files.
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-session
+
+# Atom
+.atom/
+
+# Vim
+*.swp
+*.swo
+*.swn
+.*.sw?
+Session.vim
+.netrwhist
+
+# Emacs
+#*#
+.#*
+.emacs.desktop
+
+# Eclipse
+.settings/
+.project
+.classpath
+.factorypath
+.metadata/
+*.launch
+.apt_generated/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+DerivedData/
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qmlproject.user
+*.qmlproject.user.*
+.qtc_clangd/
+CMakeLists.txt.user*
+
+# Local history and patch/merge leftovers
+.history/
+*.orig
+*.rej
+
+
+# ---------- AI coding assistants ----------
+
+.qodo/
+.cursor/
+.windsurf/
+.zed/
+.claude/settings.local.json
+CLAUDE.local.md
+.aider*
+.continue/
+
+
+# ---------- Environment variables, secrets and keys ----------
+
+# Everything starting with .env is treated as a secret.
+.env*
+# Tracked on purpose: the template and the local development file.
+!.env.development
+!.env.example
+!.env.*.example
+
+# Local secret stores and key material.
+# Negate the patterns below if a fixture under tests/ has to be committed.
+.secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+
+# ---------- Dependencies and package managers ----------
+
+node_modules/
+
+# Bun is the only package manager for this repository.
+# Foreign lockfiles are ignored so a stray install cannot fork the
+# dependency graph and produce a second source of truth.
+package-lock.json
+npm-shrinkwrap.json
+yarn.lock
+pnpm-lock.yaml
+# Legacy binary Bun lockfile; Bun >= 1.2 writes the text bun.lock.
+bun.lockb
+
+# Yarn Berry zero-install artifacts (defensive: only if yarn is run by mistake)
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+
+# ---------- Build output and bundler caches ----------
+
+dist/
+# Turborepo and TanStack caches
+.turbo/
+.tanstack/
+# ESLint cache
+.eslintcache
+
+
+# ---------- TypeScript ----------
+
+# Kept as a safety net: if tsc ever runs outside node_modules,
+# the incremental files still must not reach the repository.
+*.tsbuildinfo
+
+
+# ---------- Testing and coverage ----------
+
+coverage/
+
+
+# ---------- Logs and temporary files ----------
+
+*.log
+logs/
+# Rotated package manager logs; the *.log rule above covers the plain ones.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+tmp/
+temp/
+*.pid

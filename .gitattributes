@@ -1,0 +1,169 @@
+# ============================================================
+#  .gitattributes
+#  Conventions used in this file:
+#    - the repository baseline is LF for every text file;
+#    - CRLF is forced only where the format requires it:
+#      Windows scripts and Visual Studio solution files;
+#    - binary formats are declared explicitly even though "text=auto"
+#      would detect most of them on its own;
+#    - the last matching rule wins, so every override goes below
+#      the baseline.
+# ============================================================
+
+
+# ---------- Self ----------
+
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+
+
+# ---------- Baseline ----------
+
+*               text=auto eol=lf
+
+
+# ---------- Forced CRLF (Windows-critical) ----------
+
+*.bat           text eol=crlf
+*.cmd           text eol=crlf
+*.ps1           text eol=crlf
+*.psm1          text eol=crlf
+*.psd1          text eol=crlf
+*.sln           text eol=crlf
+
+
+# ---------- Forced LF (Unix-critical) ----------
+
+*.sh            text eol=lf
+*.bash          text eol=lf
+*.zsh           text eol=lf
+*.mk            text eol=lf
+Makefile        text eol=lf
+Dockerfile*     text eol=lf
+*.dockerfile    text eol=lf
+.dockerignore   text eol=lf
+
+
+# ---------- Environment files ----------
+
+# Tracked templates must stay LF even on a Windows checkout.
+.env*           text eol=lf
+
+
+# ---------- Do not touch ----------
+
+*.patch         -text
+*.diff          -text
+
+
+# ---------- Lockfiles ----------
+
+bun.lock        text eol=lf
+
+
+# ---------- Binaries: images ----------
+
+*.png           binary
+*.jpg           binary
+*.jpeg          binary
+*.gif           binary
+*.webp          binary
+*.avif          binary
+*.heic          binary
+*.heif          binary
+*.bmp           binary
+*.tif           binary
+*.tiff          binary
+*.ico           binary
+*.icns          binary
+*.psd           binary
+*.ai            binary
+
+
+# ---------- Binaries: fonts ----------
+
+*.woff          binary
+*.woff2         binary
+*.ttf           binary
+*.otf           binary
+*.eot           binary
+
+
+# ---------- Binaries: video ----------
+
+*.mp4           binary
+*.m4v           binary
+*.webm          binary
+*.mov           binary
+*.avi           binary
+*.mkv           binary
+
+
+# ---------- Binaries: audio ----------
+
+*.mp3           binary
+*.wav           binary
+*.ogg           binary
+*.flac          binary
+*.m4a           binary
+
+
+# ---------- Binaries: archives ----------
+
+*.zip           binary
+*.gz            binary
+*.tgz           binary
+*.bz2           binary
+*.7z            binary
+*.rar           binary
+*.xz           binary
+
+
+# ---------- Binaries: documents ----------
+
+*.pdf           binary
+*.doc           binary
+*.docx          binary
+*.xls           binary
+*.xlsx          binary
+*.ppt           binary
+*.pptx          binary
+
+
+# ---------- Binaries: executables and libraries ----------
+
+*.exe           binary
+*.dll           binary
+*.so            binary
+*.dylib         binary
+*.node          binary
+*.wasm          binary
+*.jar           binary
+*.class         binary
+
+
+# ---------- Binaries: installers and packages ----------
+
+*.msi           binary
+*.msix          binary
+*.dmg           binary
+*.pkg           binary
+*.deb           binary
+*.rpm           binary
+*.apk           binary
+*.aab           binary
+
+
+# ---------- Binaries: databases ----------
+
+*.sqlite        binary
+*.sqlite3       binary
+*.db            binary
+
+
+# ---------- Binaries: certificates and keystores ----------
+
+*.p12           binary
+*.pfx           binary
+*.jks           binary
+*.keystore      binary

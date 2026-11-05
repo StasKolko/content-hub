@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    // Linter & Formatter
+    "biomejs.biome",
+
+    // Themes & Icons (optional but recommended)
+    "pkief.material-icon-theme",
+    "github.github-vscode-theme"
+  ]
+}

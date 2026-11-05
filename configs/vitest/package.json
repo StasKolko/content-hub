@@ -1,0 +1,19 @@
+{
+  "name": "@configs/vitest",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/create-vitest-config.ts"
+  },
+  "scripts": {
+    "check:type": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@configs/typescript": "workspace:*",
+    "@vitest/coverage-v8": "catalog:test",
+    "happy-dom": "catalog:test",
+    "vite": "catalog:frontend-dev",
+    "vite-plugin-solid": "catalog:frontend-dev",
+    "vitest": "catalog:test"
+  }
+}

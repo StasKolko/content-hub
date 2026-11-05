@@ -1,0 +1,113 @@
+{
+  "files.exclude": {
+    // ROOT DIRECTORIES
+    ".qodo": true,
+
+    // IDE & Editors
+    ".idea": true,
+    ".fleet": true,
+    ".vs": true,
+    ".atom": true,
+    ".cursor": true,
+    ".windsurf": true,
+    ".zed": true,
+    ".settings": true,
+    ".metadata": true,
+    "xcuserdata": true,
+
+    // DIRECTORIES
+    "**/.tanstack": true,
+    "**/.turbo": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+
+  "search.exclude": {
+    // ROOT DIRECTORIES
+    ".qodo": true,
+
+    // IDE & Editors
+    ".idea": true,
+    ".fleet": true,
+    ".vs": true,
+    ".atom": true,
+    ".cursor": true,
+    ".windsurf": true,
+    ".zed": true,
+    ".settings": true,
+    ".metadata": true,
+    "xcuserdata": true,
+
+    // DIRECTORIES
+    "**/.tanstack": true,
+    "**/.turbo": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true
+  },
+
+  "files.watcherExclude": {
+    // ROOT DIRECTORIES
+    ".qodo/**": true,
+
+    // IDE & Editors
+    ".idea/**": true,
+    ".fleet/**": true,
+    ".vs/**": true,
+    ".atom/**": true,
+    ".cursor/**": true,
+    ".windsurf/**": true,
+    ".zed/**": true,
+    ".settings/**": true,
+    ".metadata/**": true,
+    "xcuserdata/**": true,
+
+    // DIRECTORIES
+    "**/.tanstack/**": true,
+    "**/.turbo/**": true,
+    "**/coverage/**": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  },
+
+  // Biome.js as the sole formatter and linter
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+
+  // Disable all other formatters and linters
+  "prettier.enable": false,
+  "eslint.enable": false,
+  "js/ts.format.enabled": false,
+  "json.format.enable": false,
+  "html.format.enable": false,
+  "css.format.enable": false,
+  "markdown.format.enable": false,
+
+  // Language-specific: enforce Biome
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+
+  "workbench.colorTheme": "GitHub Dark Default",
+  "workbench.iconTheme": "material-icon-theme",
+}
